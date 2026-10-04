@@ -8,14 +8,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',sans-serif;background:#0f0f13;color:#e0e0e0}
+body{font-family:'Segoe UI',sans-serif;background:#0f0f13}
 #header{background:#1a0a2e;padding:14px 20px;display:flex;align-items:center;gap:14px;border-bottom:2px solid #6a0dad}
 #header h1{font-size:1.05rem;font-weight:700;color:#c084fc}
 #header span{font-size:.8rem;color:#888}
 #badge{background:#6a0dad;color:#fff;border-radius:20px;padding:3px 12px;font-size:.78rem;font-weight:700;margin-left:auto}
 #map{height:calc(100vh - 56px);width:100%}
-.leaflet-popup-content-wrapper{border-radius:8px;font-size:.82rem;min-width:220px}
-.leaflet-popup-content{line-height:1.6}
+.leaflet-popup-content-wrapper{border-radius:10px;font-size:.82rem;min-width:230px;box-shadow:0 4px 20px rgba(0,0,0,.25)}
+.leaflet-popup-content{line-height:1.65;margin:12px 14px}
 </style>
 </head>
 <body>
@@ -36,24 +36,456 @@ body{font-family:'Segoe UI',sans-serif;background:#0f0f13;color:#e0e0e0}
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
     attribution: '', maxZoom: 20, opacity: 0.7
   }).addTo(map);
-    L.circleMarker([7.060985,-70.771092], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #1</b><br><span style=\"font-size:10px;color:#888\">86681c31-578c-4b29-b68f-4260ac27ea2b</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">DIVINO NIÑO</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.060985,-70.771092&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=86681c31-578c-4b29-b68f-4260ac27ea2b_1785537843.jpg&v=1785537883\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #1</b> · DIVINO NIÑO").addTo(map);
-    L.circleMarker([7.085226,-70.744763], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #2</b><br><span style=\"font-size:10px;color:#888\">505c9080-c659-4a2d-8310-0813bba2f767</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">LAS AMERICAS</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.085226,-70.744763&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=505c9080-c659-4a2d-8310-0813bba2f767_1785357127.jpg&v=1785357153\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #2</b> · LAS AMERICAS").addTo(map);
-    L.circleMarker([7.084477,-70.764831], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #3</b><br><span style=\"font-size:10px;color:#888\">76c2dc16-86c9-4ac7-b551-986188e4da1c</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">LA ESPERANZA</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.084477,-70.764831&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=76c2dc16-86c9-4ac7-b551-986188e4da1c_1785353766.jpg&v=1785353794\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #3</b> · LA ESPERANZA").addTo(map);
-    L.circleMarker([7.084313,-70.744464], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #4</b><br><span style=\"font-size:10px;color:#888\">9360b7ff-617f-4826-b331-d94274cd513c</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">LAS AMERICAS</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>NIDIA</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.084313,-70.744464&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=9360b7ff-617f-4826-b331-d94274cd513c_1780346649.jpg&v=1784508093\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #4</b> · LAS AMERICAS").addTo(map);
-    L.circleMarker([7.080476,-70.698336], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #5</b><br><span style=\"font-size:10px;color:#888\">f51c343b-818d-4816-83ae-3cf457de1924</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">MANHATAN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>NIDIA</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.080476,-70.698336&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=f51c343b-818d-4816-83ae-3cf457de1924_1784316644.jpg&v=1784506442\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #5</b> · MANHATAN").addTo(map);
-    L.circleMarker([7.070549,-70.757895], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #6</b><br><span style=\"font-size:10px;color:#888\">674540a3-3ac5-48d7-9771-bfbbbc59cd52</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">VILLA DEL PRADO</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.070549,-70.757895&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=674540a3-3ac5-48d7-9771-bfbbbc59cd52_1781635071.jpg&v=1781635093\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #6</b> · VILLA DEL PRADO").addTo(map);
-    L.circleMarker([7.078849,-70.745443], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #7</b><br><span style=\"font-size:10px;color:#888\">0f5af1ef-f76f-46ef-abc9-a79fa04faf3a</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">CHIRCAL</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.078849,-70.745443&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=0f5af1ef-f76f-46ef-abc9-a79fa04faf3a_1780601544.jpg&v=1780601561\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #7</b> · CHIRCAL").addTo(map);
-    L.circleMarker([7.082345,-70.750207], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #8</b><br><span style=\"font-size:10px;color:#888\">e07934b9-becf-41f8-9b7d-dd9313d7c695</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">LAS AMERICAS</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.082345,-70.750207&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=e07934b9-becf-41f8-9b7d-dd9313d7c695_1780599339.jpg&v=1780599379\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #8</b> · LAS AMERICAS").addTo(map);
-    L.circleMarker([7.079127,-70.750151], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #9</b><br><span style=\"font-size:10px;color:#888\">b21dad74-e3b5-4768-955b-3f010ae451c2</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">MERIDIANO 70</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.079127,-70.750151&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=b21dad74-e3b5-4768-955b-3f010ae451c2_1780598844.jpg&v=1780598881\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #9</b> · MERIDIANO 70").addTo(map);
-    L.circleMarker([7.087068,-70.749418], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #10</b><br><span style=\"font-size:10px;color:#888\">7cb969c1-a229-4a12-802b-a77155c75036</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">LA UNION</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.087068,-70.749418&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=7cb969c1-a229-4a12-802b-a77155c75036_1780584377.jpg&v=1780584398\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #10</b> · LA UNION").addTo(map);
-    L.circleMarker([7.089915,-70.749708], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #11</b><br><span style=\"font-size:10px;color:#888\">a64a1260-c648-43f7-a67e-bd0c40ac3c56</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">LA UNION</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.089915,-70.749708&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=a64a1260-c648-43f7-a67e-bd0c40ac3c56_1780584184.jpg&v=1780584207\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #11</b> · LA UNION").addTo(map);
-    L.circleMarker([7.08997,-70.756458], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #12</b><br><span style=\"font-size:10px;color:#888\">81c319b3-70d1-4e00-aacd-a23fe072e6d6</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">SAN LUIS</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.08997,-70.756458&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=81c319b3-70d1-4e00-aacd-a23fe072e6d6_1780087582.jpg&v=1780087606\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #12</b> · SAN LUIS").addTo(map);
-    L.circleMarker([7.089635,-70.756402], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #13</b><br><span style=\"font-size:10px;color:#888\">a41bb2bf-ef96-4a6b-a1a4-f557a9b062f2</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">SAN LUIS</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>2</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.089635,-70.756402&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=a41bb2bf-ef96-4a6b-a1a4-f557a9b062f2_1780087369.jpg&v=1780087386\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #13</b> · SAN LUIS").addTo(map);
-    L.circleMarker([7.08333,-70.759615], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #14</b><br><span style=\"font-size:10px;color:#888\">4bc3b593-3358-4d15-b57c-d81c9531076b</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">LA ESPERANZA</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>2</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.08333,-70.759615&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=4bc3b593-3358-4d15-b57c-d81c9531076b_1780086972.jpg&v=1780089376\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #14</b> · LA ESPERANZA").addTo(map);
-    L.circleMarker([7.083359,-70.759627], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #15</b><br><span style=\"font-size:10px;color:#888\">36206c0f-00d7-469b-ba54-309dc75bd71b</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">LA ESPERANZA</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>2</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.083359,-70.759627&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=36206c0f-00d7-469b-ba54-309dc75bd71b_1780086904.jpg&v=1780089416\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #15</b> · LA ESPERANZA").addTo(map);
-    L.circleMarker([7.064218,-70.722866], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #16</b><br><span style=\"font-size:10px;color:#888\">b542ad70-5dea-46eb-b0ff-ae9cc19ac637</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">BELLO HORIZONTE</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.064218,-70.722866&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=b542ad70-5dea-46eb-b0ff-ae9cc19ac637_1779369053.jpg&v=1779374209\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #16</b> · BELLO HORIZONTE").addTo(map);
-    L.circleMarker([7.085799,-70.768815], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #17</b><br><span style=\"font-size:10px;color:#888\">63a8843a-c7ea-47e7-80d0-8f2a9f85cbd0</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">SAN ANTONIO</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>34</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.085799,-70.768815&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=63a8843a-c7ea-47e7-80d0-8f2a9f85cbd0_1779225637.jpg&v=1779225665\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #17</b> · SAN ANTONIO").addTo(map);
-    L.circleMarker([7.068091,-70.758671], {radius:9,color:"#fff",weight:2,fillColor:"#8B2FC9",fillOpacity:0.92}).bindPopup("<b style=\"color:#8B2FC9\">Polivalvula #18</b><br><span style=\"font-size:10px;color:#888\">1ee6f21d-7e7b-4b9f-b70f-83a2986ecd42</span><table style=\"width:100%;margin-top:6px;border-collapse:collapse;font-size:12px\"><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Barrio</td><td style=\"font-weight:600;color:#333\">FUNDADORES</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Funcionario</td><td>EDWIN</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Diámetro</td><td>1</td></tr><tr><td style=\"color:#666;padding:2px 6px 2px 0\">Unidad const.</td><td>—</td></tr></table><a href=\"https://www.google.com/maps?q=7.068091,-70.758671&z=18\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:4px 10px;background:#4285F4;color:#fff;border-radius:4px;font-size:11px;text-decoration:none\">&#x1F4CD; Ver dirección en Google Maps</a><br><img src=\"https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=1ee6f21d-7e7b-4b9f-b70f-83a2986ecd42_1778861471.jpg&v=1778861496\" style=\"width:100%;max-width:220px;border-radius:6px;margin-top:6px\">",{maxWidth:260}).bindTooltip("<b>PV #18</b> · FUNDADORES").addTo(map);
+
+    (function() {
+      var lat=7.060985, lon=-70.771092, addrId='addr-0';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #1</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">86681c31-578c-4b29-b68f-4260ac27ea2b</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">DIVINO NIÑO</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-0" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=86681c31-578c-4b29-b68f-4260ac27ea2b_1785537843.jpg&v=1785537883" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #1</b> &middot; DIVINO NIÑO');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.085226, lon=-70.744763, addrId='addr-1';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #2</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">505c9080-c659-4a2d-8310-0813bba2f767</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">LAS AMERICAS</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-1" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=505c9080-c659-4a2d-8310-0813bba2f767_1785357127.jpg&v=1785357153" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #2</b> &middot; LAS AMERICAS');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.084477, lon=-70.764831, addrId='addr-2';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #3</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">76c2dc16-86c9-4ac7-b551-986188e4da1c</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">LA ESPERANZA</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-2" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=76c2dc16-86c9-4ac7-b551-986188e4da1c_1785353766.jpg&v=1785353794" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #3</b> &middot; LA ESPERANZA');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.084313, lon=-70.744464, addrId='addr-3';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #4</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">9360b7ff-617f-4826-b331-d94274cd513c</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">LAS AMERICAS</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-3" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>NIDIA</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=9360b7ff-617f-4826-b331-d94274cd513c_1780346649.jpg&v=1784508093" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #4</b> &middot; LAS AMERICAS');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.080476, lon=-70.698336, addrId='addr-4';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #5</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">f51c343b-818d-4816-83ae-3cf457de1924</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">MANHATAN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-4" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>NIDIA</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=f51c343b-818d-4816-83ae-3cf457de1924_1784316644.jpg&v=1784506442" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #5</b> &middot; MANHATAN');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.070549, lon=-70.757895, addrId='addr-5';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #6</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">674540a3-3ac5-48d7-9771-bfbbbc59cd52</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">VILLA DEL PRADO</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-5" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=674540a3-3ac5-48d7-9771-bfbbbc59cd52_1781635071.jpg&v=1781635093" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #6</b> &middot; VILLA DEL PRADO');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.078849, lon=-70.745443, addrId='addr-6';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #7</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">0f5af1ef-f76f-46ef-abc9-a79fa04faf3a</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">CHIRCAL</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-6" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=0f5af1ef-f76f-46ef-abc9-a79fa04faf3a_1780601544.jpg&v=1780601561" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #7</b> &middot; CHIRCAL');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.082345, lon=-70.750207, addrId='addr-7';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #8</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">e07934b9-becf-41f8-9b7d-dd9313d7c695</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">LAS AMERICAS</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-7" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=e07934b9-becf-41f8-9b7d-dd9313d7c695_1780599339.jpg&v=1780599379" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #8</b> &middot; LAS AMERICAS');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.079127, lon=-70.750151, addrId='addr-8';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #9</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">b21dad74-e3b5-4768-955b-3f010ae451c2</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">MERIDIANO 70</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-8" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=b21dad74-e3b5-4768-955b-3f010ae451c2_1780598844.jpg&v=1780598881" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #9</b> &middot; MERIDIANO 70');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.087068, lon=-70.749418, addrId='addr-9';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #10</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">7cb969c1-a229-4a12-802b-a77155c75036</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">LA UNION</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-9" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=7cb969c1-a229-4a12-802b-a77155c75036_1780584377.jpg&v=1780584398" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #10</b> &middot; LA UNION');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.089915, lon=-70.749708, addrId='addr-10';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #11</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">a64a1260-c648-43f7-a67e-bd0c40ac3c56</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">LA UNION</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-10" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=a64a1260-c648-43f7-a67e-bd0c40ac3c56_1780584184.jpg&v=1780584207" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #11</b> &middot; LA UNION');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.08997, lon=-70.756458, addrId='addr-11';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #12</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">81c319b3-70d1-4e00-aacd-a23fe072e6d6</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">SAN LUIS</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-11" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=81c319b3-70d1-4e00-aacd-a23fe072e6d6_1780087582.jpg&v=1780087606" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #12</b> &middot; SAN LUIS');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.089635, lon=-70.756402, addrId='addr-12';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #13</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">a41bb2bf-ef96-4a6b-a1a4-f557a9b062f2</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">SAN LUIS</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-12" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>2</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=a41bb2bf-ef96-4a6b-a1a4-f557a9b062f2_1780087369.jpg&v=1780087386" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #13</b> &middot; SAN LUIS');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.08333, lon=-70.759615, addrId='addr-13';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #14</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">4bc3b593-3358-4d15-b57c-d81c9531076b</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">LA ESPERANZA</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-13" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>2</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=4bc3b593-3358-4d15-b57c-d81c9531076b_1780086972.jpg&v=1780089376" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #14</b> &middot; LA ESPERANZA');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.083359, lon=-70.759627, addrId='addr-14';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #15</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">36206c0f-00d7-469b-ba54-309dc75bd71b</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">LA ESPERANZA</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-14" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>2</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=36206c0f-00d7-469b-ba54-309dc75bd71b_1780086904.jpg&v=1780089416" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #15</b> &middot; LA ESPERANZA');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.064218, lon=-70.722866, addrId='addr-15';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #16</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">b542ad70-5dea-46eb-b0ff-ae9cc19ac637</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">BELLO HORIZONTE</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-15" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=b542ad70-5dea-46eb-b0ff-ae9cc19ac637_1779369053.jpg&v=1779374209" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #16</b> &middot; BELLO HORIZONTE');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.085799, lon=-70.768815, addrId='addr-16';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #17</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">63a8843a-c7ea-47e7-80d0-8f2a9f85cbd0</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">SAN ANTONIO</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-16" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>34</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=63a8843a-c7ea-47e7-80d0-8f2a9f85cbd0_1779225637.jpg&v=1779225665" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #17</b> &middot; SAN ANTONIO');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
+
+    (function() {
+      var lat=7.068091, lon=-70.758671, addrId='addr-17';
+      var marker = L.circleMarker([lat,lon], {
+        radius:9, color:'#fff', weight:2, fillColor:'#8B2FC9', fillOpacity:0.92
+      });
+      marker.bindPopup(`<b style="color:#8B2FC9;font-size:13px">Polivalvula #18</b><span style="display:block;font-size:10px;color:#aaa;margin-bottom:6px">1ee6f21d-7e7b-4b9f-b70f-83a2986ecd42</span><table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="color:#666;padding:2px 8px 2px 0;white-space:nowrap">Barrio</td><td style="font-weight:700;color:#6a0dad">FUNDADORES</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Dirección</td><td id="addr-17" style="color:#333;font-style:italic">cargando...</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Funcionario</td><td>EDWIN</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Diámetro</td><td>1</td></tr><tr><td style="color:#666;padding:2px 8px 2px 0">Unidad const.</td><td>—</td></tr></table><img src="https://five.epicollect.net/api/media/georreferenciacion-redes?type=photo&format=entry_original&name=1ee6f21d-7e7b-4b9f-b70f-83a2986ecd42_1778861471.jpg&v=1778861496" style="width:100%;max-width:240px;border-radius:6px;margin-top:8px">`, {maxWidth:270});
+      marker.bindTooltip('<b>PV #18</b> &middot; FUNDADORES');
+      marker.on('popupopen', function() {
+        fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lon+'&format=json&zoom=18&addressdetails=1',
+          {headers:{'User-Agent':'AraucanaGasesMap/1.0'}}
+        ).then(function(r){return r.json()}).then(function(d){
+          var a=d.address||{};
+          var road=a.road||a.pedestrian||a.path||a.footway||'';
+          var num=a.house_number?(' #'+a.house_number):'';
+          var dir=(road+num).trim()||d.display_name.split(',')[0];
+          var el=document.getElementById(addrId);
+          if(el){el.textContent=dir;el.style.fontStyle='normal';el.style.color='#111';}
+        }).catch(function(){
+          var el=document.getElementById(addrId);
+          if(el){el.textContent='No disponible';el.style.color='#999';}
+        });
+      });
+      marker.addTo(map);
+    })();
 </script>
 </body>
 </html>
